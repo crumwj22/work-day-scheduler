@@ -1,0 +1,48 @@
+ /*typical setup using html attributes and classes*/
+ body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: white;
+  }
+
+ textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    color: black;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  header {
+    text-align: center;
+    background-color: black;
+    color: black;
+    border-radius: 0;
+    border-bottom: 20px solid white;
+    border-top: black !important;
+  }
+  
+  .description{
+    white-space: pre-wrap;
+  }
+  
+  .time-block{
+    text-align: left;
+    border-radius: 15px;
+  }
+
+  .row {
+    white-space: pre-wrap;
+    border-top: 1.5px solid;
+    height: 80px;
+  }
+  
+  .hour {
+    background-color: white;
+    color: #000000;
+   
+  }
+  
+  

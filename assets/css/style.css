@@ -20,10 +20,14 @@
     background-color: black;
     color: black;
     border-radius: 0;
-    border-bottom: 20px solid white;
-    border-top: black !important;
+    border-bottom: 50px solid white;
+    border-top: 10px solid white;
+    font-weight: bolder;
+    
+    /* border-top: black !important; */
   }
-  
+
+   
   .description{
     white-space: pre-wrap;
   }
@@ -45,4 +49,15 @@
    
   }
   
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #0dcaf0;
+    color: white;
+  }
   
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }

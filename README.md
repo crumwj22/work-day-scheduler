@@ -27,14 +27,11 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
-```
 
 
 
 
-Work Day Scheduler
-
-<a href="https://crumwj22.github.io/work-day-scheduler/</a>
+<a href="https://crumwj22.github.io/work-day-scheduler/">Work Day Scheduler</a>
 
 
 <img src="assets/images/work-day-scheduler.png">

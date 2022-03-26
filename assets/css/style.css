@@ -1,5 +1,5 @@
  
- /*body, text are and header styling*/
+ /* body, text and header styling */
  body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -66,7 +66,7 @@
     border-bottom: 1px solid black;
   }
 
-  /* color coded timeblocks  */
+  /* color coded timeblocks */
   .past {
     background-color: #a7a5a5;
     color: white;
@@ -84,6 +84,12 @@
 
   /* Media query for medium and small screens */
   @media screen and (max-width: 768px), screen and (max-width: 575px) {
+    
+    textarea {
+      min-height: 75px;
+      border: 0;
+    }
+    
     .row {
       height: auto;
       margin-top: 10px;
@@ -99,11 +105,6 @@
       height: 25px;
     }
   
-    textarea {
-      min-height: 75px;
-      border: 0;
-    }
-    
     .hour {
       background-color: rgb(233, 231, 231);
       color: #000000;

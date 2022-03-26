@@ -1,16 +1,47 @@
-// current day
-var today = moment();
-$("#currentDay").text(today.format("MMMM Do, YYYY")); 
- 
+$(document).ready(function() {
+
+// save button functioning, save text to time-block, text saved on local storage after refresh
 $(".saveBtn").on("click", function () {
     
-    console.log(this);
-    var text = $(this).siblings(".description").val(); 
-    var time = $(this).parent().attr("id"); 
+var text = $(this).siblings(".description").val(); 
+var time = $(this).parent().attr("id"); 
 
     
-    localStorage.setItem(time, text);
-})
+localStorage.setItem(time, text);
+
+});
+
+function timeTracker() {
+    //get current number of hours.
+    var timeNow = moment().hour();
+
+    // loop over time blocks
+    $(".time-block").each(function () {
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);// split the hour from the id
+        
+        // To check the time and add the classes for background indicators
+        if (blockTime < timeNow) {
+            $(this).addClass("past");
+        }
+        else if (blockTime === timeNow) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        }
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+
+        }
+    })
+}
+    
+
+timeTracker();
+  
+var interval = setInterval(timeTracker, 15000);
+
+// load saved data from local storage
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
 $("#hour11 .description").val(localStorage.getItem("hour11"));
@@ -20,3 +51,15 @@ $("#hour14 .description").val(localStorage.getItem("hour14"));
 $("#hour15 .description").val(localStorage.getItem("hour15"));
 $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
+
+$("#currentDay").text(moment().format("MMMM Do, YYYY"));
+
+});
+
+
+
+
+
+
+  
+
